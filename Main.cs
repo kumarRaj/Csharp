@@ -10,9 +10,17 @@ namespace LinkedList
             list.Add("3");
             list.Add("4");
             list.Add("5");
-            list.Print();
+            System.Console.WriteLine("List's initial contents");
+            System.Console.WriteLine(list.GetListContents());
+            System.Console.WriteLine("Deleting first element");
+            list.Delete("1");
+            System.Console.WriteLine(list.GetListContents());
+            System.Console.WriteLine("Deleting last element");
             list.Delete("5");
-            list.Print();            
+            System.Console.WriteLine(list.GetListContents());
+            System.Console.WriteLine("Deleting content from between");
+            list.Delete("3");
+            System.Console.WriteLine(list.GetListContents());
         }
     }
 }

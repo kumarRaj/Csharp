@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 namespace LinkedList
 {
@@ -44,13 +45,16 @@ namespace LinkedList
             }            
         }
 
-        public void Print(){
+        public string GetListContents(){
+            StringBuilder builder = new StringBuilder("");
             Node node = head.Next;
             while (node != null)
             {
-                Console.WriteLine(node.Data + "\n");
+                builder.Append(node.Data + "\t");
                 node = node.Next;
             }
+            builder.Append("\n");
+            return builder.ToString();
         }
     }
 }
