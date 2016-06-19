@@ -2,6 +2,17 @@ using System;
 
 namespace LinkedList
 {
+    class Node
+    {
+        public Node Next;
+        public object Data;
+
+        public Node(object data, Node node){
+            Next = node;
+            Data = data;
+        }
+    }
+    
     public class LinkedList
     {
         Node head;
