@@ -11,6 +11,8 @@ namespace LinkedList
             list.Add("4");
             list.Add("5");
             list.Print();
+            list.Delete("3");
+            list.Print();            
         }
     }
 }

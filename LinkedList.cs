@@ -12,7 +12,7 @@ namespace LinkedList
             Data = data;
         }
     }
-    
+
     public class LinkedList
     {
         Node head;
@@ -29,6 +29,19 @@ namespace LinkedList
             }
             
             reader.Next = new Node(data, null);
+        }
+
+        public void Delete(object data){
+            Node current = head.Next;
+            Node previous = head;
+            while (current?.Next != null)
+            {
+                if(current.Data.Equals(data)){
+                    previous.Next = current.Next;
+                }
+                previous = current;
+                current = current.Next;
+            }            
         }
 
         public void Print(){
