@@ -34,7 +34,7 @@ namespace LinkedList
         public void Delete(object data){
             Node current = head.Next;
             Node previous = head;
-            while (current?.Next != null)
+            while (current != null)
             {
                 if(current.Data.Equals(data)){
                     previous.Next = current.Next;
